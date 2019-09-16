@@ -28,7 +28,6 @@ def upload_file(request):
     if request.method == 'POST':
         form = RecordForm(request.POST, request.FILES)
         if form.is_valid():
-            # file is saved
             form.save()
             return HttpResponseRedirect('/')
     else:
