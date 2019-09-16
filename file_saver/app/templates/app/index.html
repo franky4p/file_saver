@@ -1,0 +1,28 @@
+{% extends "app/layout.html" %}
+
+{% block content %}
+
+<div class="jumbotron">
+    <h1>Table files</h1>
+</div>
+
+<div class="row">
+    <div class="col-md-4">
+     <table class="table table-bordered">
+         <thead>
+            <th>Name</th>
+            <th>URL</th>
+          </thead>
+         <tbody>
+         {% for record in records %}
+         <tr>
+             <td>{{record.name}}</td>
+             <td>{{record.file.url}}</td>
+         </tr>
+         {% endfor %}
+         </tbody>
+     </table>
+    </div>
+</div>
+
+{% endblock %}
